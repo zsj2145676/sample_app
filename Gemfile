@@ -1,7 +1,7 @@
 source 'http://ruby.taobao.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0.rc2'
+gem 'rails'
 
 group :development, :test do
   gem 'sqlite3'
@@ -12,8 +12,16 @@ group :production do
   gem 'pg'
 end
 
+# Linux 中需要的测试组 gem
 group :test do
   gem 'capybara'
+  gem 'rb-inotify'
+  gem 'libnotify'
+  gem 'guard-rspec'
+  gem 'guard-spork'
+  gem 'guard-livereload'
+  gem 'guard-bundler'
+  gem 'spork-rails', github: 'railstutorial/spork-rails'
 end
 
 # Use SCSS for stylesheets

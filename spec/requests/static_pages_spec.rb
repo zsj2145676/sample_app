@@ -11,7 +11,7 @@ describe "Static pages" do
 
     it "should have the title 'Home'" do
       visit '/static_pages/home'
-      page.should have_title("Ruby on Rails Tutorial Sample App | Home")
+      page.should have_title("Ruby on Rails Tutorial Sample App")
     end
   end
 
@@ -29,7 +29,6 @@ describe "Static pages" do
   end
 
   describe "About page" do
-
     it "should have the h1 'About Us'" do
       visit '/static_pages/about'
       page.should have_selector('h1', :text => 'About Us')
@@ -38,6 +37,18 @@ describe "Static pages" do
     it "should have the title 'About Us'" do
       visit '/static_pages/about'
       page.should have_title("Ruby on Rails Tutorial Sample App | About Us")
+    end
+  end
+
+  describe "Contact page" do
+    it "should have the h1 'Contact Me'" do
+      visit '/static_pages/contact'
+      page.should have_selector('h1', :text => 'Contact Me')
+    end
+
+    it "should have the title 'Contact Me'" do
+      visit '/static_pages/contact'
+      page.should have_title("Ruby on Rails Tutorial Sample App | Contact Me")
     end
   end
 end
