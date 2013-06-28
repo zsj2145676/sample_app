@@ -3,6 +3,9 @@ source 'http://ruby.taobao.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
 
+# Use Bootstrap for front-end stylesheet
+gem 'bootstrap-sass'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
