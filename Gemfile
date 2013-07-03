@@ -1,14 +1,15 @@
 source 'http://ruby.taobao.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails'
-
+gem 'rails', '4.0.0'
+gem 'protected_attributes'
 # Use Bootstrap for front-end stylesheet
 gem 'bootstrap-sass'
 
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
+  gem 'annotate'
 end
 
 group :production do
@@ -28,7 +29,7 @@ group :test do
 end
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0.rc2'
+gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -54,7 +55,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem "bcrypt-ruby", '3.0.0', github: 'zsj2145676/bcrypt-ruby'
 
 # Use unicorn as the app server
 # gem 'unicorn'
